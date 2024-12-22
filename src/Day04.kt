@@ -23,8 +23,6 @@ class Puzzle(val puzzle: List<String>) {
     val xRange = 0..puzzle[0].lastIndex
     val yRange = 0..puzzle.lastIndex
 
-    val maxIndex = searchword.lastIndex
-
     fun matchInPuzzle(x: Int, y: Int, direction: Direction): Boolean {
         // check boundaries
         if ((x + searchword.lastIndex * direction.xOffset) in xRange &&
